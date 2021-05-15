@@ -101,10 +101,10 @@ def audio(path: str = None, stream: BufferedReader = None) -> dict:
 
         return dict(error=error_message)
 
-    text_sphinx = recognizer.recognize_sphinx(_audio)
+    text_google = recognizer.recognize_google(_audio)
 
     return dict(
-        text=text_sphinx,
+        text=text_google,
         error=error_message
     )
 
