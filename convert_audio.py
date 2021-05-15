@@ -3,6 +3,8 @@ from io import BufferedReader
 from pydub import AudioSegment
 import speech_recognition
 import validators
+import requests
+import speech_recognition as sr
 
 
 def convert_audio(path: str = None,
@@ -107,11 +109,6 @@ def audio(path: str = None, stream: BufferedReader = None) -> dict:
         text=text_google,
         error=error_message
     )
-
-
-import requests
-import speech_recognition as sr
-
 
 def download(url, path):
     response = requests.get(url)     # get the response of the url
